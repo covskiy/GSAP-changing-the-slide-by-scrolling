@@ -1,22 +1,22 @@
-ARG USER_NAME=node
-ARG USER_UID=1000
-ARG USER_GID=1000
-
 # 24 нода на lts дебиане
-FROM node:24-bookworm
+FROM node:24-bookworm-slim
 
 # Метаданные образа
 LABEL description="Node.js dev container's image"
 
 # Список полезных пакетов, отсутствующий в исходном образе
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    tree \
     less \
     nano \
     tmux \
     htop \
-    netstat \
-    build-essential \
+    # tree \
+    # netstat \
+    # build-essential \
+    curl \ 
+    # wget \
+    git \
+    # ssh \
     && rm -rf /var/lib/apt/lists/*
 
 # Установка Node.js глобальных пакетов для отладки/разработки
@@ -25,14 +25,8 @@ RUN npm install -g \
     serve \
     tsx
 
-# Создаём пользователя, если он не 'node'
-# RUN if [ "${USER_NAME}" != "node" ]; then \
-#         groupadd -g ${USER_GID} ${USER_NAME} && \
-#         useradd -m -u ${USER_UID} -g ${USER_GID} -s /bin/bash ${USER_NAME}; \
-#     fi
-
 # Настраиваем рабочую директорию
-USER ${USER_NAME}
+USER node
 WORKDIR /workspace
 
 # Экспонируем порт

@@ -1,12 +1,12 @@
-import type { UserConfig } from 'vite'
+import type { UserConfig } from 'vite';
 
 export default {
-    server: {
-        port: 3000,
-        host: "0.0.0.0",
-        watch: {
-          usePolling: true
-        }
-    }
+  server: {
+    port: 3000,
+    host: '0.0.0.0',
+    watch: {
+      usePolling: true,
+    },
+  },
   // ...
-} satisfies UserConfig
+} satisfies UserConfig;

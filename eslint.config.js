@@ -3,6 +3,7 @@ import globals from 'globals';
 import tseslint from 'typescript-eslint';
 import css from '@eslint/css';
 import html from '@html-eslint/eslint-plugin';
+import prettierPlugin from 'eslint-config-prettier/flat';
 import { defineConfig, globalIgnores } from 'eslint/config';
 
 export default defineConfig([
@@ -41,8 +42,10 @@ export default defineConfig([
     // When using the recommended rules (or "html/all" for all rules)
     extends: ['html/recommended'],
     language: 'html/html',
-    // rules: {
-    //   "html/no-duplicate-class": "error",
-    // }
+    rules: {
+      '@html-eslint/indent': 'warn',
+      //   "html/no-duplicate-class": "error",
+    },
   },
+  prettierPlugin,
 ]);

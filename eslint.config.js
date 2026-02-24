@@ -43,8 +43,13 @@ export default defineConfig([
     extends: ['html/recommended'],
     language: 'html/html',
     rules: {
-      '@html-eslint/indent': 'warn',
-      //   "html/no-duplicate-class": "error",
+      'html/indent': 'off',
+      'html/require-closing-tags': ['error', { selfClosing: 'always' }],
+      'html/no-extra-spacing-attrs': [
+        'error',
+        { enforceBeforeSelfClose: true },
+      ],
+      'html/attrs-newline': 'off',
     },
   },
   prettierPlugin,

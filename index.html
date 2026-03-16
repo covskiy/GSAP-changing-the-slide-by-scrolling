@@ -2,12 +2,88 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/typescript.svg" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <link rel="stylesheet" href="src/style.css" />
     <title>gsap-slider</title>
   </head>
   <body>
-    <div id="app"></div>
+    <!-- Intro -->
+    <section class="intro">
+      <h1>We create modern interiors that feel effortlessly personal.</h1>
+    </section>
+
+    <!-- Sticky column -->
+    <section class="sticky-cols">
+      <div class="sticky-cols-wrapper">
+        <div class="col col-1">
+          <div class="col-content">
+            <div class="col-content-wrapper">
+              <h2>
+                We design spaces where comfort meets quiet sophistication.
+              </h2>
+              <p>
+                Layered textures, rich tones, and thoughtful details come
+                together to create interiors that feel lived-in yet elevated.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col col-2">
+          <div class="col-img col-img-1">
+            <div class="col-img-wrapper">
+              <img src="/pic1.svg" alt="" />
+            </div>
+          </div>
+
+          <div class="col-img col-img-2">
+            <div class="col-img-wrapper">
+              <img src="/pic2.svg" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <div class="col col-3">
+          <div class="col-content">
+            <div class="col-content-wrapper">
+              <h2>Our interiors are crafted to feel as cal as they look.</h2>
+              <p>
+                Each space is designed with international balance between warmth
+                and modernity, light and shadow, function and beauty
+              </p>
+            </div>
+
+            <div class="col-content-wrapper-2">
+              <h2>
+                Every detail is chosen to bring ease and elegance into your
+                space.
+              </h2>
+              <p>
+                From custom furnishings to ambient lighting, we shape
+                environments that reflect your lifestyle with timeless clarity.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col col-4">
+          <div class="col-img">
+            <div class="col-img-wrapper">
+              <img src="/pic3.svg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Outro -->
+    <section class="outro">
+      <h2>Timeless design begins with a conversation.</h2>
+    </section>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

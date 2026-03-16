@@ -1,0 +1,82 @@
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <!-- Фон (стена в перспективе) с радиальным градиентом для глубины -->
+  <defs>
+    <radialGradient id="wallGradient" cx="0.7" cy="0.3" r="1.2">
+      <stop offset="0%" stop-color="#f5efe7" />
+      <stop offset="100%" stop-color="#d9cdbb" />
+    </radialGradient>
+    <linearGradient id="floorGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#c8b297" />
+      <stop offset="100%" stop-color="#a6896b" />
+    </linearGradient>
+  </defs>
+
+  <!-- Пол (передний план, уходящий в глубину) -->
+  <polygon points="0,250 400,200 400,400 0,400" fill="url(#floorGradient)" />
+  
+  <!-- Левая стена (с картинами) в перспективе -->
+  <polygon points="0,0 200,100 200,300 0,400" fill="#e5d9cb" />
+  <!-- Правая стена (с окном) в перспективе -->
+  <polygon points="400,0 200,100 200,300 400,350" fill="#f0e8dd" />
+
+  <!-- Текстура досок на левой стене (горизонтальные линии, уходящие в перспективу) -->
+  <line x1="0" y1="50" x2="200" y2="120" stroke="#cbbaa8" stroke-width="2" />
+  <line x1="0" y1="120" x2="200" y2="160" stroke="#cbbaa8" stroke-width="2" />
+  <line x1="0" y1="190" x2="200" y2="200" stroke="#cbbaa8" stroke-width="2" />
+  <line x1="0" y1="260" x2="200" y2="240" stroke="#cbbaa8" stroke-width="2" />
+  <line x1="0" y1="330" x2="200" y2="280" stroke="#cbbaa8" stroke-width="2" />
+
+  <!-- Текстура досок на правой стене -->
+  <line x1="400" y1="60" x2="200" y2="120" stroke="#ddcfbe" stroke-width="2" />
+  <line x1="400" y1="130" x2="200" y2="160" stroke="#ddcfbe" stroke-width="2" />
+  <line x1="400" y1="200" x2="200" y2="200" stroke="#ddcfbe" stroke-width="2" />
+  <line x1="400" y1="270" x2="200" y2="240" stroke="#ddcfbe" stroke-width="2" />
+
+  <!-- Линия стыка стен (угол комнаты) -->
+  <line x1="200" y1="100" x2="200" y2="300" stroke="#7d6b5d" stroke-width="3" stroke-dasharray="5,3" />
+
+  <!-- КАРТИНЫ НА ЛЕВОЙ СТЕНЕ (в перспективе) -->
+
+  <!-- Большая картина (горизонтальная) -->
+  <polygon points="40,70 150,100 145,180 35,140" fill="#d9d0b5" stroke="#4a3729" stroke-width="3" />
+  <!-- Содержимое большой картины (простой пейзаж) -->
+  <circle cx="80" cy="120" r="12" fill="#a57c5c" transform="skewX(-5)" />
+  <circle cx="120" cy="140" r="12" fill="#6b8e4c" transform="skewX(-5)" />
+  <line x1="65" y1="150" x2="125" y2="110" stroke="#b35e3a" stroke-width="3" transform="skewX(-5)" />
+
+  <!-- Маленькая квадратная картина (над большой) -->
+  <polygon points="150,30 200,45 195,85 145,70" fill="#c0b7a6" stroke="#4a3729" stroke-width="2.5" />
+  <polygon points="163,45 183,60 173,72 153,57" fill="#b35e3a" transform="skewX(-3)" />
+
+  <!-- Вертикальная картина (ниже) -->
+  <polygon points="60,200 100,210 95,270 55,255" fill="#b0aa9a" stroke="#4a3729" stroke-width="2.5" />
+  <rect x="68" y="215" width="20" height="18" fill="#7d5d4a" transform="skewX(-4)" />
+  <rect x="68" y="240" width="20" height="18" fill="#3f6045" transform="skewX(-4)" />
+
+  <!-- Маленькая картина справа на левой стене -->
+  <polygon points="120,220 160,230 157,265 117,252" fill="#cfc5b2" stroke="#4a3729" stroke-width="2.5" />
+  <polygon points="130,235 150,240 145,255 125,250" fill="#7f4f3a" transform="skewX(-3)" />
+
+  <!-- ОКНО НА ПРАВОЙ СТЕНЕ (в перспективе) -->
+  <polygon points="300,90 380,120 375,210 295,170" fill="#e1f0fa" stroke="#7d6b5d" stroke-width="3" />
+  <!-- Переплет окна (вертикаль) -->
+  <line x1="335" y1="105" x2="330" y2="185" stroke="#7d6b5d" stroke-width="2.5" />
+  <!-- Переплет окна (горизонталь) -->
+  <line x1="300" y1="135" x2="375" y2="155" stroke="#7d6b5d" stroke-width="2.5" />
+
+  <!-- Занавеска справа -->
+  <path d="M320 105 Q 330 130 315 150 Q 305 170 320 185" stroke="#b5a392" fill="none" stroke-width="2" />
+
+  <!-- СТОЛ (перед окном, в перспективе) -->
+  <!-- Столешница -->
+  <polygon points="260,190 360,210 340,260 240,235" fill="#b08968" stroke="#5e3e2b" stroke-width="2" />
+  <!-- Ножки стола -->
+  <polygon points="270,210 280,210 275,270 265,265" fill="#b08968" stroke="#5e3e2b" stroke-width="1.5" />
+  <polygon points="330,225 340,225 335,275 325,270" fill="#b08968" stroke="#5e3e2b" stroke-width="1.5" />
+
+  <!-- Тень под столом -->
+  <polygon points="260,200 360,220 340,250 250,235" fill="#2a1e14" opacity="0.2" />
+
+  <!-- Передняя линия пола (для глубины) -->
+  <line x1="0" y1="350" x2="400" y2="320" stroke="#9b8269" stroke-width="4" opacity="0.5" />
+</svg>

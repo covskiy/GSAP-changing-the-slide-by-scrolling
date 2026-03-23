@@ -6,11 +6,17 @@ import { SplitText } from 'gsap/SplitText';
 document.addEventListener('DOMContentLoaded', () => {
   gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
 
-  // Выключаем на мобильных браузерах сворачивание адресной строки при скролле
-  // в противном случае комбинирование dvh, svh, min-height и ScrollTrigger.refresh()
-  ScrollTrigger.normalizeScroll(true);
+  /* ---------------- Scroll Smoother --------------- */
+  const smoother = ScrollSmoother.create({
+    wrapper: '#smooth-wrapper',
+    content: '#smooth-content',
+    smooth: 1.5, // Время сглаживания (сек)
+    effects: true, // data-speed/data-lag эффекты
+    normalizeScroll: true, // Debounced normalizeScroll, Выключаем на мобильных браузерах сворачивание адресной строки при скролле
+    smoothTouch: 0.1, // Сглаживание на тач (опционально)
+  });
 
-  /* Text Split */
+  /* ---------------- Text Split -------------------- */
   const textElements = document.querySelectorAll('.col-3 h2, .col-3 p');
   textElements.forEach((el) => {
     const split = new SplitText(el, {
@@ -33,7 +39,6 @@ document.addEventListener('DOMContentLoaded', () => {
       end: '+=500%',
       pin: true,
       scrub: 1,
-      // markers: true,
     },
   });
 

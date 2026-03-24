@@ -7,12 +7,12 @@ document.addEventListener('DOMContentLoaded', () => {
   gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
 
   /* ---------------- Scroll Smoother --------------- */
-  const smoother = ScrollSmoother.create({
+  ScrollSmoother.create({
     wrapper: '#smooth-wrapper',
     content: '#smooth-content',
     smooth: 1.5, // Время сглаживания (сек)
     effects: true, // data-speed/data-lag эффекты
-    normalizeScroll: true, // Debounced normalizeScroll, Выключаем на мобильных браузерах сворачивание адресной строки при скролле
+    normalizeScroll: true, // Debounced normalizeScroll, Выключаем на мобильных браузерах сворачивание адресной строки при скроллировании
     smoothTouch: 0.1, // Сглаживание на тач (опционально)
   });
 

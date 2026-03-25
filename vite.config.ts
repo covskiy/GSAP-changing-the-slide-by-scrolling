@@ -1,4 +1,4 @@
-import type { UserConfig } from 'vite';
+import { type UserConfig } from 'vite';
 
 export default {
   server: {
@@ -8,5 +8,15 @@ export default {
       usePolling: true,
     },
   },
-  // ...
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (id.includes('node_modules')) {
+            return 'vendor';
+          }
+        },
+      },
+    },
+  },
 } satisfies UserConfig;

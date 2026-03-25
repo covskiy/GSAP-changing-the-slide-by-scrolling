@@ -11,11 +11,7 @@
     "format:fix": "prettier . --write",
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview",
-    "testts": "npx eslint --print-config src/main.ts",
-    "testjs": "npx eslint --print-config src/test.js",
-    "testcss": "npx eslint --print-config src/style.css",
-    "testhtml": "npx eslint --print-config index.html"
+    "preview": "vite preview"
   },
   "devDependencies": {
     "@eslint/css": "^0.14.1",
@@ -33,5 +29,8 @@
   },
   "overrides": {
     "vite": "^8.0.0-beta.13"
+  },
+  "dependencies": {
+    "gsap": "^3.14.2"
   }
 }

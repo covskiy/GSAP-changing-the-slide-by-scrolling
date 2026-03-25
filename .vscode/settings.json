@@ -12,8 +12,7 @@
     "**/build": true
   },
   "editor.formatOnSave": true,
-  "javascript.format.enable": false,
-  "typescript.format.enable": false,
+  "js/ts.format.enabled": false,
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -21,6 +20,9 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[html]": {
